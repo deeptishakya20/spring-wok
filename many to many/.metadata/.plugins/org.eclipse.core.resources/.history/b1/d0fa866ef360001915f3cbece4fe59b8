@@ -1,0 +1,24 @@
+package com.capgemini.manytomany.entity;
+
+import java.util.Set;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumns;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+
+@Entity
+public class Project {
+	
+	@Id
+	private int ProjectId;
+	private String ProjectName;
+	
+	@ManyToMany
+	@JoinTable(name= "employee_project", joinColumns = @JoinColumn(name = "PROJECT_ID"),
+	inverseJoinColumns = @JoinColumn(name = "EMPLOYEE_ID"))
+	Set<Employee> employee;
+	
+
+}

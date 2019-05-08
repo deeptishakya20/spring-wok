@@ -1,0 +1,65 @@
+package com.capgemini.manytomany.entity;
+
+import java.util.Set;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+
+@Entity
+public class Employee {
+	
+	@Id
+	private int EmployeeId;
+	private String EmployeeName;
+	
+	@ManyToMany
+	@JoinTable(name = "employee_project", joinColumns = @JoinColumn(name = "EMPLOYEE_ID"),
+	inverseJoinColumns = @JoinColumn(name = "PROJECT_ID"))
+	Set<Project> project;
+	
+	public Employee() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Employee(int employeeId, String employeeName) {
+		super();
+		EmployeeId = employeeId;
+		EmployeeName = employeeName;
+	}
+	
+	public int getEmployeeId() {
+		return EmployeeId;
+	}
+	
+	public void setEmployeeId(int employeeId) {
+		EmployeeId = employeeId;
+	}
+	
+	public String getEmployeeName() {
+		return EmployeeName;
+	}
+	
+	public void setEmployeeName(String employeeName) {
+		EmployeeName = employeeName;
+	}
+	
+	public Set<Project> getProject() {
+		return project;
+	}
+	
+	public void setProject(Set<Project> project) {
+		this.project = project;
+	}
+	
+	@Override
+	public String toString() {
+		return "Employee [EmployeeId=" + EmployeeId + ", EmployeeName=" + EmployeeName + ", project=" + project + "]";
+	}
+	
+	
+	
+
+}

@@ -1,0 +1,5 @@
+package com.example.onetoonemappingjpa.service.impl;
+
+public class PersonServiceImpl {
+
+}

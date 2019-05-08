@@ -1,0 +1,19 @@
+package com.capgemini.onetomany.service;
+
+import com.capgemini.onetomany.employee.Employee;
+
+public class EmployeeServiceImpl implements EmployeeSerivce {
+
+	@Override
+	public void addNew() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Employee getAll(Employee employee) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

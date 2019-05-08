@@ -1,0 +1,12 @@
+package com.capgemini.manytomany.service;
+
+import java.util.Set;
+
+import com.capgemini.manytomany.entity.Employee;
+import com.capgemini.manytomany.entity.Project;
+
+public interface EmployeeService {
+	
+	public void addNew(Set<Employee> employee);
+	public void addNew(Set<Project> project);
+}

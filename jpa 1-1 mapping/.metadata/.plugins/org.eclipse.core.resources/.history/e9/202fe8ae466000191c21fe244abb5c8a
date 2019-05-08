@@ -1,0 +1,57 @@
+package com.example.onetoonemappingjpa.person;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import com.example.onetoonemappingjpa.profile.Profile;
+
+
+@Entity
+public class Person {
+	
+	@Id
+	private int PersonId;
+	private String PersonName;
+	private Profile profile;
+
+	public Person() {
+		super();
+	}
+
+	public Person(int personId, String personName) {
+		super();
+		PersonId = personId;
+		PersonName = personName;
+		
+	}
+
+
+	public int getPersonId() {
+		return PersonId;
+	}
+
+
+
+	public void setPersonId(int personId) {
+		PersonId = personId;
+	}
+
+
+
+	public String getPersonName() {
+		return PersonName;
+	}
+
+
+
+	public void setPersonName(String personName) {
+		PersonName = personName;
+	}
+
+	public String toString() {
+		return PersonId+" "+PersonName+" ";
+	}
+	
+	
+
+}

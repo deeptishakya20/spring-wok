@@ -1,0 +1,45 @@
+package com.capgemini.jpasimplemapping.service.impl;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.capgemini.jpasimplemapping.dao.PersonDao;
+import com.capgemini.jpasimplemapping.person.Person;
+import com.capgemini.jpasimplemapping.service.PersonService;
+
+@Service
+public class PersonServiceImpl implements PersonService {
+	
+	@Autowired
+	PersonDao dao;
+	
+
+	@Override
+	public void addNewPerson(Person person) {
+		dao.save(person);
+	}
+	
+	@Override
+	
+	public Person getPerson(int personId) {
+		
+		Optional<Person> opt = dao.findById(personId);
+		Person person = opt.get();
+		
+		return person;
+		
+		
+	}
+
+	public void deletePerson(int personId) {
+		
+		 
+	 dao.deleteById(personId);
+	}
+	
+	
+		
+
+}

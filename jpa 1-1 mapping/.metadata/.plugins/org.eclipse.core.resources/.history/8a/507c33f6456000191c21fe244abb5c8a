@@ -1,0 +1,49 @@
+package com.example.onetoonemappingjpa.profile;
+
+import javax.persistence.Entity;
+
+import com.example.onetoonemappingjpa.person.Person;
+
+@Entity
+public class Profile {
+	
+	private int PersonId;
+	private String BookName;
+	private String BookAuthor;
+	private Person person;
+	
+	public Profile() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Profile( String bookName, String bookAuthor) {
+		super();
+		BookName = bookName;
+		BookAuthor = bookAuthor;
+	}
+	public int getPersonId() {
+		return PersonId;
+	}
+	public void setPersonId(int personId) {
+		PersonId = personId;
+	}
+	public String getBookName() {
+		return BookName;
+	}
+	public void setBookName(String bookName) {
+		BookName = bookName;
+	}
+	public String getBookAuthor() {
+		return BookAuthor;
+	}
+	public void setBookAuthor(String bookAuthor) {
+		BookAuthor = bookAuthor;
+	}
+	
+	public void setPerson(Person person) {
+		this.person = person;
+		
+	}
+	
+
+}

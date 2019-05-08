@@ -1,0 +1,42 @@
+package com.capgemini.manytomany.service;
+
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.capgemini.manytomany.dao.PersonDao;
+import com.capgemini.manytomany.dao.ProjectDao;
+import com.capgemini.manytomany.entity.Person;
+import com.capgemini.manytomany.entity.Project;
+
+@Service
+public class PersonServiceImpl implements PersonService {
+
+	@Autowired
+	private PersonDao dao;
+	
+	@Autowired
+	private ProjectDao pdao;
+
+	@Override
+	public void addNewPerson(Set<Person> person) {
+		dao.saveAll(person);
+	}
+
+	@Override
+	public void addNewProject(Set<Project> project) {
+		pdao.saveAll(project);
+		
+	}
+
+	@Override
+	public Person findPersonById(int id) {
+		Person person = dao.findById(id).get();
+		return person;
+	}
+	
+
+
+}
+

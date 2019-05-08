@@ -1,0 +1,32 @@
+package com.capgemini.manytomany.service;
+
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.capgemini.manytomany.dao.EmployeeDao;
+import com.capgemini.manytomany.entity.Employee;
+import com.capgemini.manytomany.entity.Project;
+
+public class EmployeeServiceImpl implements EmployeeService {
+	
+	@Autowired
+    private EmployeeDao dao;
+	
+	@Override
+	public void addNewEmployee(Set<Employee> employee) {
+		dao.saveAll(employee);	
+	}
+
+	@Override
+	public void addNewProject(Set<Project> project) {
+		dao.saveAll(project);
+
+	}
+
+	@Override
+	public Employee getEmployeeById(int EmployeeId) {
+		return null;
+	}
+
+}

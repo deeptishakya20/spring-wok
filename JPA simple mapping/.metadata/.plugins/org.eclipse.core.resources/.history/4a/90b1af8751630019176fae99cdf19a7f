@@ -1,0 +1,21 @@
+package com.capgemini.jpasimplemapping.service;
+
+import java.util.ArrayList;
+
+import com.capgemini.jpasimplemapping.person.Person;
+
+
+public interface PersonService {
+
+	public void addNewPerson(Person person);
+
+	public Person getPerson(int personId);
+	
+	public boolean deletePerson(int personId);
+
+//	public ArrayList<Person> findAllPerson();
+	
+	public void updatePerson(int personId);
+
+	
+}

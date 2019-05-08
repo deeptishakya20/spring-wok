@@ -1,0 +1,12 @@
+package com.capgemini.manytomany.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ManyToManyController{
+	
+	
+	
+	
+	
+}

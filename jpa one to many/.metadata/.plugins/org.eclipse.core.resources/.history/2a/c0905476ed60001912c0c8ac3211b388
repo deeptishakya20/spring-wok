@@ -1,0 +1,20 @@
+package com.capgemini.onetomany.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.capgemini.onetomany.dao.EmployeeDao;
+import com.capgemini.onetomany.employee.Employee;
+import com.capgemini.onetomany.service.EmployeeSerivce;
+
+@RestController
+public class OneToManyController {
+	
+	@Autowired
+	private EmployeeSerivce service;
+	
+
+	
+
+}

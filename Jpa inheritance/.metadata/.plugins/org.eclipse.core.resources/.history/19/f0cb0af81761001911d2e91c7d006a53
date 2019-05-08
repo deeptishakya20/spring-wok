@@ -1,0 +1,5 @@
+package com.capgemini.inheritancemapping.entity;
+
+public class Person {
+
+}

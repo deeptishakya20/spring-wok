@@ -1,0 +1,16 @@
+package com.capgemini.onetomany.certificates;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import com.capgemini.onetomany.employee.Employee;
+
+@Entity
+public class Certificates {
+	
+	@Id
+	private int CertificateId;
+	private String CertificateName;
+	private Employee employee;
+
+}

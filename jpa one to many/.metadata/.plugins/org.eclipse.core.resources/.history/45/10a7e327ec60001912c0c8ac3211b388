@@ -1,0 +1,10 @@
+package com.capgemini.onetomany.service;
+
+
+
+public interface EmployeeSerivce {
+	
+	public void addNew();
+	public Employee getAll();
+
+}

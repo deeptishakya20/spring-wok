@@ -1,0 +1,21 @@
+package snippet;
+
+public class Snippet {
+	@RequestMapping("/")
+		public void addNew() {
+			Person person= new Person(101,"AMD",new Profile(11,"COMP"));
+			
+			//Profile profile = new Profile(11,"COMP");
+			
+			dao.save(person);
+			//dao.save(profile);
+		}
+		
+		@RequestMapping("/new")
+		public Person findAll() {
+			Person person = dao.findById(101).get();
+			return person;
+			
+		}
+}
+

@@ -1,0 +1,13 @@
+package com.capgemini.onetomany.employee;
+
+import java.util.Set;
+
+import com.capgemini.onetomany.certificates.Certificates;
+
+public class Employee {
+	
+	private int EmployeeId;
+	private String EmployeeName;
+	private Set<Certificates> certificates;
+
+}

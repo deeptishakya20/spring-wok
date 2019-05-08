@@ -1,0 +1,12 @@
+package com.capgemini.manytomany.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.capgemini.manytomany.service.EmployeeService;
+
+public class ManyToManyController {
+	
+	@Autowired
+	private EmployeeService service;
+
+}

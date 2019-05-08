@@ -1,0 +1,10 @@
+package com.capgemini.inheritancemapping.service;
+
+import com.capgemini.inheritancemapping.entity.Employee;
+
+public interface PersonService {
+	
+	public void addNew();
+	public Employee getBtId(Employee employeeId);
+
+}

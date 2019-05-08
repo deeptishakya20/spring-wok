@@ -1,0 +1,66 @@
+package com.capgemini.onetomany.employee;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+
+import com.capgemini.onetomany.certificates.Certificates;
+
+@Entity
+public class Employee {
+	
+	@Id
+	private int EmployeeId;
+	private String EmployeeName;
+	
+	@OneToMany(mappedBy = "employee", cascade = CascadeType.ALL,
+    orphanRemoval = true)
+	private Set<Certificates> certificates;
+	public Employee(int employeeId, String employeeName, Set<Certificates> certificates) {
+		super();
+		EmployeeId = employeeId;
+		EmployeeName = employeeName;
+		this.certificates = certificates;
+	}
+	
+	public Employee() {
+		super();
+
+	}
+	public int getEmployeeId() {
+		return EmployeeId;
+	}
+	public void setEmployeeId(int employeeId) {
+		EmployeeId = employeeId;
+	}
+	public String getEmployeeName() {
+		return EmployeeName;
+	}
+	public void setEmployeeName(String employeeName) {
+		EmployeeName = employeeName;
+	}
+	
+	 private Set<Certificates> albums = new HashSet<>();
+	
+	 @OneToMany(mappedBy = "singer", cascade=CascadeType.ALL,
+	 orphanRemoval=true)
+	 public Set<Certificates> getAlbums() {
+	 return albums;
+	 }
+	 public boolean addAbum(Album album) {
+	 album.setSinger(this);
+	 return getAlbums().add(album);
+	 }
+	 public void removeAlbum(Album album) {
+	 getAlbums().remove(album);
+	 }
+	 public void setAlbums(Set<Album> albums) {
+	 this.albums = albums;
+	 }
+
+}

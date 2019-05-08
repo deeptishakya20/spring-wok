@@ -1,0 +1,31 @@
+package com.example.onetoonemappingjpa.service.impl;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.onetoonemappingjpa.dao.PersonDao;
+import com.example.onetoonemappingjpa.person.Person;
+import com.example.onetoonemappingjpa.service.PersonService;
+
+@Service
+public class PersonServiceImpl implements PersonService{
+	
+	@Autowired
+	private PersonDao dao;
+
+	@Override
+	public void addNewPerson(Person person) {
+		dao.save(person);
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+
+}

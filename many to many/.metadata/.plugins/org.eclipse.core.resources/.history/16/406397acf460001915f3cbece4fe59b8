@@ -1,0 +1,8 @@
+package com.capgemini.manytomany.service;
+
+public interface EmployeeService {
+	
+	public void addNew(et<Employee>);
+	public Set<Employee> get
+
+}

@@ -1,0 +1,5 @@
+package com.capgemini.onetomany.controller;
+
+public class OneToManyController {
+
+}

@@ -1,0 +1,5 @@
+package com.capgemini.manytomany.entity;
+
+public class Project {
+
+}

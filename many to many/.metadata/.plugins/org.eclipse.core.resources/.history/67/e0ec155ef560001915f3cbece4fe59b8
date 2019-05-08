@@ -1,0 +1,28 @@
+package com.capgemini.manytomany.service;
+
+import java.util.Set;
+
+import com.capgemini.manytomany.entity.Employee;
+import com.capgemini.manytomany.entity.Project;
+
+public class EmployeeServiceImpl implements EmployeeService {
+
+	@Override
+	public void addNewEmployee(Set<Employee> employee) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void addNewProject(Set<Project> project) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Employee getEmployeeById(int EmployeeId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

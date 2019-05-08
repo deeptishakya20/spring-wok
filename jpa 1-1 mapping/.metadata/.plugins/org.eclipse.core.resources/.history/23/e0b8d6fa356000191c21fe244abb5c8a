@@ -1,0 +1,11 @@
+package com.example.onetoonemappingjpa.person;
+
+import com.example.onetoonemappingjpa.address.Address;
+
+public class Person {
+	
+	private int PersonId;
+	private String PersonName;
+	private Address address;
+
+}

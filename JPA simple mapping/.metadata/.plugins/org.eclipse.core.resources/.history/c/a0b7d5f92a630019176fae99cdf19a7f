@@ -1,0 +1,34 @@
+package com.capgemini.jpasimplemapping.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.capgemini.jpasimplemapping.person.Person;
+import com.capgemini.jpasimplemapping.service.impl.PersonServiceImpl;
+
+@RestController
+public class PersonController {
+	
+	@Autowired
+	PersonServiceImpl service;
+	
+	@RequestMapping("/")
+	public String addOne() {
+		Person person = new Person(101,"Deepti");
+		service.addNewPerson(person);
+		return "Hello";
+		
+		}
+	
+	@RequestMapping("/hello")
+	public Person getPerson() {
+		Person person = service.getPerson(101);
+		return person;
+		
+	}
+	
+	
+	
+
+}

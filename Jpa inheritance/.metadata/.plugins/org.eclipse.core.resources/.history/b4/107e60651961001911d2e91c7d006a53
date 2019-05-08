@@ -1,0 +1,19 @@
+package com.capgemini.inheritancemapping.service;
+
+import com.capgemini.inheritancemapping.entity.Employee;
+
+public class PersonServiceImpl implements PersonService {
+
+	@Override
+	public void addNew() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Employee getBtId(Employee employeeId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

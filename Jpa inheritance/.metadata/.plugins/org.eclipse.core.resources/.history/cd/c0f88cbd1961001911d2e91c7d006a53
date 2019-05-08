@@ -1,0 +1,24 @@
+package com.capgemini.inheritancemapping.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.capgemini.inheritancemapping.entity.Employee;
+
+public class EmployeeServiceImpl implements EmployeeService {
+
+	@Autowired
+	private EmployeeDao dao;
+	
+	@Override
+	public void addNew(Employee employee) {
+		dao.save(employee);
+		
+	}
+
+
+	@Override
+	public Employee getBtId(int employeeId) {
+		Employee employee = dao.findById(employeeId).get();
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.example.onetoonemappingjpa.service;
+
+import com.example.onetoonemappingjpa.person.Person;
+
+public interface PersonService {
+
+	public void addNewPerson(Person person);
+
+}

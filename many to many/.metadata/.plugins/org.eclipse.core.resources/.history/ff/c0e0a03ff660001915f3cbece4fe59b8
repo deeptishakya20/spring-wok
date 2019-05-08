@@ -1,0 +1,9 @@
+package com.capgemini.manytomany.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.capgemini.manytomany.entity.Employee;
+
+public interface EmployeeDao extends JpaRepository<Employee, Integer> {
+
+}

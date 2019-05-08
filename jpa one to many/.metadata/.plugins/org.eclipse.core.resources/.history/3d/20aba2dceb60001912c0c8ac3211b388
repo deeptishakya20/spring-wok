@@ -1,0 +1,5 @@
+package com.capgemini.onetomany.service;
+
+public interface EmployeeSerivce {
+
+}

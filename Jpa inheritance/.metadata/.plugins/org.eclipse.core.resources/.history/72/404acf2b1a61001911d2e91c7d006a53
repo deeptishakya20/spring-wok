@@ -1,0 +1,13 @@
+package com.capgemini.inheritancemapping.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.capgemini.inheritancemapping.service.PersonService;
+
+public class InheritanceController {
+	
+	@Autowired
+	EmployeeService service;
+	
+
+}

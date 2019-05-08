@@ -1,0 +1,9 @@
+package com.capgemini.onetomany.service;
+
+@Service
+public interface EmployeeSerivce {
+	
+	@Autowired
+	private EmployeeDao dao;
+
+}
